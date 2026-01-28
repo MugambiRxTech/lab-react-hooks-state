@@ -8,11 +8,11 @@ export const sampleProducts = [
 
 export default function ProductList({ products, onAddToCart }) {
   if (products.length === 0) {
-    return <p>No products available</p>;
+    return <p className="empty">No products available</p>;
   }
 
   return (
-    <div>
+    <div className="list">
       {products.map((p) => (
         <ProductCard key={p.id} product={p} onAddToCart={onAddToCart} />
       ))}
